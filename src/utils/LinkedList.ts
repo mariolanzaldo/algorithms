@@ -32,20 +32,6 @@ export class Node <T> {
         return nodeToAdd;
     }
 
-  getNode(num: number) {
-      let nodeToCheck = this.head;
-      let count = 0;
-      
-      if(num > this.length) throw new Error("Doesn't Exist!");
-      
-      while(count < num) {
-        nodeToCheck = nodeToCheck.next;
-        count++;
-      }
-      
-      return nodeToCheck;
-    }
-
   removeNode(num: number) {
       let nodeToCheck = this.head,
           count       = 0,
