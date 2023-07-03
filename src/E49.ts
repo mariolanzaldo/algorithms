@@ -23,6 +23,11 @@ const bloodTypes: {
 
         };
 
+        const Rh = {
+            "+": ["+", "-"],
+            "-": ["-"],
+        }
+
 function consanguineCalculations(test: string) {
     const [parent1, parent2, child] = test.split(" ");
     
@@ -104,9 +109,9 @@ function determineChildABO(blood1Types: string[], blood2Types: string[]): any {
 
 function determineChildRh(parent1Rh: string, parent2Rh: string) {
     if(parent1Rh === "-" && parent2Rh === "-") {
-        return ["-"];
+        return Rh[parent1Rh];
     } else {
-        return ["+", "-"];
+        return Rh["+"];
     }
 }
 export default consanguineCalculations;
