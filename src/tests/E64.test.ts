@@ -1,5 +1,4 @@
 import GraphM from "../E64";
-// import Graph from "../utils/Graph";
 
 test("Basic test", () => {
     const graph = new GraphM(4);
