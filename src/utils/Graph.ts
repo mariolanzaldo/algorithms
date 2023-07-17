@@ -14,4 +14,8 @@ export default class Graph<T>{
     addEdge(v1: string, v2: string) {
         this.adjacencyList[v1].push(v2);
     }
+
+    getNeighbors(vertex: string): string[] {
+        return this.adjacencyList[vertex] || [];
+    }
 };
